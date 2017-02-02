@@ -35,11 +35,18 @@ function getserInput(){
 function displayResults(songs){
   for(var i = 0; i < songs.resultCount; i++){
   $('#showResults').append(
-  "<h3>Search Result</h3><br></br><li>"+
-  "Artist Name:" + songs.results.artistName+
-  "Track Name:" + songs.results.trackName+
-  "Album:" + songs.results.collectionName+
-  "</li>"); //link to html unfiltered list <ul></ul>
+  "<ul>"+
+  "<img src=" + songs.results[i].artworkUrl100 + "> "+ "</ul>"+
+  "<ul>"+
+  "Artist Name:" + " " + songs.results[i].artistName+ " " +  "</ul>"+
+  "<ul>"+
+  "Track Name:" + " " +songs.results[i].trackName+ " " +  "</ul>"+
+  "<ul>"+
+  "Album:" + " " +songs.results[i].collectionName+ " " + "</ul>"+
+  "<audio controls>" + "<source src=" + songs.results[i].previewUrl+ ".ogg" + "type=audio/ogg>"  +
+  "<source src=" + songs.results[i].previewUrl +".mp3"+ "type=audio/ogg>" + "</audio>" +
+  "<br></br" +"<br></br" +"<br></br" + "<br></br" +"<br></br" +"<br></br" +
+  "</ul>"); //link to html unfiltered list <ul></ul>
   }
 }
 
