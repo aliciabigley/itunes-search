@@ -11,7 +11,7 @@
 // });
 
 function startSearch(){
-  var itunesApi = "https://itunes.apple.com/search?limit=3&term="; ///change limit before submitting!!!!!
+  var itunesApi = "https://itunes.apple.com/search?limit=5&term=";
   var userInput = getserInput();
   var url = itunesApi + userInput;
   $.ajax({
@@ -33,8 +33,10 @@ function getserInput(){
 }
 
 function displayResults(songs){
+
+  $('#showResults').empty();
   for(var i = 0; i < songs.resultCount; i++){
-  $('#showResults').append(
+  $('#showResults').prepend(
   "<ul>"+
   "<img src=" + songs.results[i].artworkUrl100 + "> "+ "</ul>"+
   "<ul>"+
@@ -45,8 +47,7 @@ function displayResults(songs){
   "Album:" + " " +songs.results[i].collectionName+ " " + "</ul>"+
   "<ul>"+
   "<audio controls><source src='" + songs.results[i].previewUrl + "' type=" + "audio/mp4>" + "</audio>" +
-  //"<source src=" + songs.results[i].previewUrl +".mp3"+ "type=" + "audio>" + "</audio>" +
-  "<br></br" +"<br></br" +"<br></br" + "<br></br" +"<br></br" +"<br></br" +
+  "<br></br" +
   "</ul>"); //link to html unfiltered list <ul></ul>
   }
 }

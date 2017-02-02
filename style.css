@@ -1,0 +1,23 @@
+body{
+background: url(images/technology-music-sound-audio.jpg)no-repeat fixed;
+background-size: cover;
+}
+#showResults
+{
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 600px;
+height: 600px;
+}
+#showResults{
+	font-family: helvetica;
+
+  font-size:large;
+  font-weight:500;
+
+
+}
