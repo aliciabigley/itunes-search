@@ -1,15 +1,3 @@
-// $('#search').click(function(){
-//   var itunesApi = "https://itunes.apple.com/search?term=";
-//   var userInput = getserInput()
-//   var url = itunesApi + userInput
-//   $.ajax({
-//     url: url,
-//     method: 'get',
-//     data: {term: userInput},
-//     dataType: 'jsonp',
-//   });
-// });
-
 function startSearch(){
   var itunesApi = "https://itunes.apple.com/search?limit=5&term=";
   var userInput = getserInput();
@@ -25,8 +13,7 @@ function startSearch(){
   });
 
 }
-//forloop
-//result.append
+
 function getserInput(){
   var getInput = $("#userInput").val();
   return getInput;
@@ -51,34 +38,3 @@ function displayResults(songs){
   "</ul>"); //link to html unfiltered list <ul></ul>
   }
 }
-
-
-// function displayResults(songs){
-//   if (songs.resultCount === 0){
-// 		//display("Sorry, we couldn't find anyone with that search request.");
-//   }
-// 		else {
-// 			var searchResults = songs.results.map(function(data) {
-// 				return ["Artist Name:" + " " + data.artistName, "Track Name:" + " " + data.trackName, "Album:" + " " + data.collectionName, data.artworkUrl30,  ].join(" ");
-// 			});
-// 			//alert("We found the following result:" + " " + searchResults );
-// 		}
-// }
-
-// function searchMusic(){
-// var searchItunes = combineInputAndApi();
-// return searchItunes
-// }
-//
-// function userInput(){
-//   var getInput = $("#userInput").val();
-//   return getInput;
-// }
-
-//
-// function startSearch(){
-//
-//   var input = getInput();
-//   var searchFor = itunesApi + input;
-//   return searchFor;
-// }
