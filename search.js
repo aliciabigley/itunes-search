@@ -43,8 +43,9 @@ function displayResults(songs){
   "Track Name:" + " " +songs.results[i].trackName+ " " +  "</ul>"+
   "<ul>"+
   "Album:" + " " +songs.results[i].collectionName+ " " + "</ul>"+
-  "<audio controls>" + "<source src=" + songs.results[i].previewUrl+ ".ogg" + "type=audio/ogg>"  +
-  "<source src=" + songs.results[i].previewUrl +".mp3"+ "type=audio/ogg>" + "</audio>" +
+  "<ul>"+
+  "<audio controls><source src='" + songs.results[i].previewUrl + "' type=" + "audio/mp4>" + "</audio>" +
+  //"<source src=" + songs.results[i].previewUrl +".mp3"+ "type=" + "audio>" + "</audio>" +
   "<br></br" +"<br></br" +"<br></br" + "<br></br" +"<br></br" +"<br></br" +
   "</ul>"); //link to html unfiltered list <ul></ul>
   }
